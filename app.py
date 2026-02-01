@@ -2,11 +2,29 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+#Dummy data
+#This is a list of dictionaries and each dictionaries will represt a single blogPost
+posts = [
+    {
+        'author': 'Parthip MP',
+        'title': 'Goat',
+        'content': 'Yeah I commited after few months on Git Hub',
+        'date_posted': 'Feb 1, 2026'
+
+    },
+    {
+        'author': 'Prithvi MP',
+        'title': 'Bot',
+        'content': 'Finally you commited in Git Hub',
+        'date_posted': 'Feb 2, 2026'
+    }
+        ]
+
 @app.route("/")
 @app.route("/home")
 
 def home():
-    return render_template('home.html')
+    return render_template('home.html', posts=posts)
 
 #In the url bar after the local host link type the name of the function
 #example http://127.0.0.1:5000\about. This pops up the about page
