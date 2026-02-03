@@ -30,7 +30,7 @@ def home():
 #example http://127.0.0.1:5000\about. This pops up the about page
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    return render_template('about.html', title='About')
 
 
 #This part is important for the local server to activate
