@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h1 style="color: #007bff;">Hello {{ name }}!</h1>
+        <p>You have successfully moved to the second page.</p>
+        <a href="/">Try again</a>
+    </div>
+</body>
+</html>
